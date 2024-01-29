@@ -1,0 +1,1 @@
+az cognitiveservices account keys list --name NAMEOFTHERESOURCE --resource-group RGNAME  #Query keys for Azure AI Services account
