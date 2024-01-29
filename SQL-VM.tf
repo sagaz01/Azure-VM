@@ -1,12 +1,4 @@
-terraform {
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "=3.0.0"
-    }
-  }
-}
-
+# These are the lab specs:
 # Free SQL Server License: SQL 2019 Developer on Windows Server 2022.
 # Subscription: <Your subscription>
 # Resource group: <Your resource group>
@@ -16,7 +8,7 @@ terraform {
 # Image: Free SQL Server License: SQL 2019 Developer on Windows Server 2022 - Gen1
 # Azure spot instance: No (unchecked)
 # Size: Standard D2s_v3 (2 vCPUs, 8 GiB memory). You may need to select the "See all sizes" link to see this option)
-# Administrator account username: sqladmin
+# Administrator account username: sqladmin (or whatever you want)
 # Administrator account password: pwd!DP300lab01 (or your own password that meets the criteria)
 # Select inbound ports: RDP (3389)
 # Would you like to use an existing Windows Server license?: No (unchecked)
@@ -33,10 +25,6 @@ terraform {
       version = "=3.0.0"
     }
   }
-}
-
-provider "azurerm" {
-  features {}
 }
 
 resource "azurerm_resource_group" "RG1" {
