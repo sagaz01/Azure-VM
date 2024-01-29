@@ -13,8 +13,7 @@
 # Select inbound ports: RDP (3389)
 # Would you like to use an existing Windows Server license?: No (unchecked)
 #
-
-provider "azurerm" {
+ provider "azurerm" {
   features {}
 }
 
@@ -97,5 +96,3 @@ resource "azurerm_mssql_virtual_machine" "azureSQLServerVM" {
     maintenance_window_starting_hour       = 2
   }
 }
-
-
